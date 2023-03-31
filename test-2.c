@@ -194,30 +194,68 @@
 
 //字符串就是一串字符，用双引号括起来的一串字符
 #include<string.h>			//strlen函数的头文件
-int main()
-{
-	"abcdef";
-	"hello Ian";
+//int main()
+//{
+//	"abcdef";
+//	"hello Ian";
+//
+//	//字符数组，数组是一组相同类型的元素
+//	//字符串在结尾的位置隐藏了一个\0的字符
+//	//\0是字符串的结束标志
+//	char sz[]= "hello Ian";
+//
+//	char sz1[] = "abc";
+//	char sz2[] = { 'a','b','c',};
+//	//char sz2[] = { 'a','b','c','\0'};	//末尾需要加\0不然不会结束，会输出乱码
+//	printf("%s\n", sz1);				//得使用%s
+//	printf("%s\n", sz2);
+//
+//	//求一下字符串的长度
+//	int len=strlen("abc");		//string lenth
+//	printf("%d\n", len);
+//
+//	printf("%d\n", strlen(sz1));
+//	printf("%d\n", strlen(sz2));			//随机值
+//	//\0作为字符串的结束标志转义字符，但是在计算长度的时候不会被计算在内
+//
+//
+//	return 0;
+//}
 
-	//字符数组，数组是一组相同类型的元素
-	//字符串在结尾的位置隐藏了一个\0的字符
-	//\0是字符串的结束标志
-	char sz[]= "hello Ian";
-
-	char sz1[] = "abc";
-	char sz2[] = { 'a','b','c',};
-	//char sz2[] = { 'a','b','c','\0'};	//末尾需要加\0不然不会结束，会输出乱码
-	printf("%s\n", sz1);				//得使用%s
-	printf("%s\n", sz2);
-
-	//求一下字符串的长度
-	int len=strlen("abc");		//string lenth
-	printf("%d\n", len);
-
-	printf("%d\n", strlen(sz1));
-	printf("%d\n", strlen(sz2));			//随机值
-	//\0作为字符串的结束标志转义字符，但是在计算长度的时候不会被计算在内
 
 
-	return 0;
-}
+
+//转义字符	转变了原来的意思
+//int main()
+//{
+//	printf("c:\test\test.c");			//c:      est     est.c			这是因为\t是转义字符
+//	printf("c:\\test\\test.c");			//\\就不会转义，表示反斜杠
+//	printf("ab\ncd");					//\n		换行
+//	printf("\n%c\n", '\'');				//\'		输出	'	的转义字符
+//	//printf在打印数据的时候，可以制定打印格式
+//	printf("%d", 100);					//%d		打印一个整型
+//	printf("%c", 'a');					//%d		打印一个字符
+//	printf("%s", "abc");				//%d		打印一个字符串
+//	//printf("\a\a\a");					//\a	蜂鸣器
+//	printf("\n");
+//	printf("%c\n", '\130');				//8进制的130是88，X的ASCⅡ码值是88			\ddd	其中ddd表示1~3个八进制的数字
+//	printf("%c\n", '\x30');				//16进制的30是48，0的ASCⅡ码值是48			\xdd	其中dd表示2个16进制的数字
+//	printf("%d\n", strlen("c:\test\328\test.c"));		//结果是14个字符“\t”转义字符算一个，“\32”算一个，“8”算一个
+//	return 0;
+//}
+
+
+//注释：是用来解释复杂代码的
+
+//int main()
+//{
+//	//int a = 10;			//C++的注释风格
+//	/*
+//	int b=0;
+//	*/						//C语言的注释风格		现在很少用
+//
+//	return 0;
+//}
+
+
+
