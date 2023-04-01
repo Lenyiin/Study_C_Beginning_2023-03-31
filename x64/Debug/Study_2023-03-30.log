@@ -1,4 +1,2 @@
-﻿  test-2.c
-D:\C_code\Study_2023-03-30\Study_2023-03-30\test-2.c(243,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
-D:\C_code\Study_2023-03-30\Study_2023-03-30\test-2.c(243,9): message : 请考虑在格式字符串中使用“%zd”
+﻿  test-5-分支语句（if、switch）.c
   Study_2023-03-30.vcxproj -> D:\C_code\Study_2023-03-30\x64\Debug\Study_20230330.exe

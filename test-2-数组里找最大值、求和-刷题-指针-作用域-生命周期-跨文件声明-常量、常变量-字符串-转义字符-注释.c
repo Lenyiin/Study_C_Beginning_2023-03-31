@@ -1,6 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 
+//视频P8-P14
+
 //必须实践
 //必须画图，内存布局
 //必须调试
@@ -258,4 +260,7 @@
 //}
 
 
-
+static int Add1(int x, int y)
+{
+	return x + y;
+}

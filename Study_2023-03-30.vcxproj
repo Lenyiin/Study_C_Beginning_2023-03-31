@@ -20,7 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test-1-主函数-数据类型及大小-scanf函数.c" />
-    <ClCompile Include="test-2.c" />
+    <ClCompile Include="test-2-数组里找最大值、求和-刷题-指针-作用域-生命周期-跨文件声明-常量、常变量-字符串-转义字符-注释.c" />
+    <ClCompile Include="test-3-选择语句-循环语句-创建函数-数组-操作符（算数、位移、单目、关系操作符、条件操作符、常见关键字、typedef、static静态的）.c" />
+    <ClCompile Include="test-4-define-指针-结构体.c" />
+    <ClCompile Include="test-5-分支语句（if、switch）.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
