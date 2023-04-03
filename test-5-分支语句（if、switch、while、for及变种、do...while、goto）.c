@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 
+//P29-P44
 //分支和循环语句
 //C语言是结构化的程序设计语言
 //顺序结构
@@ -861,14 +862,16 @@
 
 //goto语句在深度嵌套函数中好用
 //goto语句只能在一个函数范围内跳，不能跨函数跳
-void test()
-{
-flag:
-	printf("test\h");
-}
+//void test()
+//{
+//flag:
+//	printf("test\h");
+//}
+//
+//int main()
+//{
+//	goto flag;				goto函数不能跨函数使用
+//	return 0;
+//}
 
-int main()
-{
-	goto flag;
-	return 0;
-}
+

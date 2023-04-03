@@ -27,7 +27,10 @@
     <ClCompile Include="test-4-define-指针-结构体.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test-5-分支语句（if、switch）.c">
+    <ClCompile Include="test-5-分支语句（if、switch、while、for及变种、do...while、goto）.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test-6.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,4 +1,10 @@
-﻿  test-5-分支语句（if、switch）.c
-D:\C_code\Study_2023-03-30\Study_2023-03-30\test-5-分支语句（if、switch）.c(867,9): warning C4129: “h”: 不可识别的字符转义序列
-D:\C_code\Study_2023-03-30\Study_2023-03-30\test-5-分支语句（if、switch）.c(866,1): warning C4102: “flag”: 未引用的标签
-D:\C_code\Study_2023-03-30\Study_2023-03-30\test-5-分支语句（if、switch）.c(872,7): error C2094: 标签“flag”未定义
+﻿  test-4-define-指针-结构体.c
+  test-5-分支语句（if、switch、while、for及变种、do...while、goto）.c
+  test-6.c
+D:\C_code\Study_2023-03-30\Study_2023-03-30\test-6.c(1,1): warning C4828: 文件包含在偏移 0x365 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  正在生成代码
+  4 of 4 functions (100.0%) were compiled.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  Study_2023-03-30.vcxproj -> D:\C_code\Study_2023-03-30\x64\Release\Study_20230330.exe
