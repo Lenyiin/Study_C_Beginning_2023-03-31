@@ -1,2 +1,4 @@
-﻿  test-6.c
+﻿  test-7-数组.c
+D:\C_code\Study_2023-03-30\Study_2023-03-30\test-7-数组.c(107,6): warning C4101: “arr”: 未引用的局部变量
+D:\C_code\Study_2023-03-30\Study_2023-03-30\test-7-数组.c(108,7): warning C4101: “ch”: 未引用的局部变量
   Study_2023-03-30.vcxproj -> D:\C_code\Study_2023-03-30\x64\Debug\Study_20230330.exe

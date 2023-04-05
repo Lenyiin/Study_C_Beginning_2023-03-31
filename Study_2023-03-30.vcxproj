@@ -24,7 +24,8 @@
     <ClCompile Include="test-3-选择语句-循环语句-创建函数-数组-操作符（算数、位移、单目、关系操作符、条件操作符、常见关键字、typedef、static静态的）.c" />
     <ClCompile Include="test-4-define-指针-结构体.c" />
     <ClCompile Include="test-5-分支语句（if、switch、while、for及变种、do...while、goto）.c" />
-    <ClCompile Include="test-6.c" />
+    <ClCompile Include="test-6-函数（库函数、自定义函数）-实参、形参-二分查找一个数-链式访问、嵌套调用-递归、迭代.c" />
+    <ClCompile Include="test-7-数组.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

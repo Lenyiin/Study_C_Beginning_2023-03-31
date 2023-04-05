@@ -30,7 +30,10 @@
     <ClCompile Include="test-5-分支语句（if、switch、while、for及变种、do...while、goto）.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test-6.c">
+    <ClCompile Include="test-6-函数（库函数、自定义函数）-实参、形参-二分查找一个数-链式访问、嵌套调用-递归、迭代.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test-7-数组.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
