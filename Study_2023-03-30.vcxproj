@@ -27,6 +27,7 @@
     <ClCompile Include="test-6-函数（库函数、自定义函数）-实参、形参-二分查找一个数-链式访问、嵌套调用-递归、迭代.c" />
     <ClCompile Include="test-7-数组定义、创建、传参、冒泡排序.c" />
     <ClCompile Include="test-8-三、五子棋.c" />
+    <ClCompile Include="test-9-扫雷.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
