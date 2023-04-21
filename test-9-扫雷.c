@@ -204,33 +204,33 @@ void game_mine_sweeping()
 	FindMine(mine, show, ROW, COL);
 }
 
-int main()
-{
-	int input = 0;
-	srand((unsigned int)time(NULL));
-	do							//do...while循环可以先开始再判断，可以作为一直开始的选项
-	{
-		//游戏菜单
-		menu();					//首先开始游戏菜单
-		//选择是否游戏
-		printf("请选择，并按 enter 键确认！\n");
-		scanf("%d", &input);
-		switch (input)
-		{
-		case 1:
-			printf("扫雷游戏正在启动，请稍后... ...\n\n");
-			game_mine_sweeping();
-			break;
-		case 0:
-			printf("正在退出游戏，请稍后... ...\n");
-			break;
-		default:
-			printf("你的输入有误，请确认后重新输入：\n");
-			break;
-		}
-	} while (input);
-	return 0;
-}
+//int main()
+//{
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//	do							//do...while循环可以先开始再判断，可以作为一直开始的选项
+//	{
+//		//游戏菜单
+//		menu();					//首先开始游戏菜单
+//		//选择是否游戏
+//		printf("请选择，并按 enter 键确认！\n");
+//		scanf("%d", &input);
+//		switch (input)
+//		{
+//		case 1:
+//			printf("扫雷游戏正在启动，请稍后... ...\n\n");
+//			game_mine_sweeping();
+//			break;
+//		case 0:
+//			printf("正在退出游戏，请稍后... ...\n");
+//			break;
+//		default:
+//			printf("你的输入有误，请确认后重新输入：\n");
+//			break;
+//		}
+//	} while (input);
+//	return 0;
+//}
 
 
 //可以优化的

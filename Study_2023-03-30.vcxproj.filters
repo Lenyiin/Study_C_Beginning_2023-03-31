@@ -42,5 +42,8 @@
     <ClCompile Include="test-9-扫雷.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test-10-操作符详解.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
