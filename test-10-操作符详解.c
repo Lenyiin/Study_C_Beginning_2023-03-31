@@ -703,24 +703,23 @@
 //}
 
 
-int main()
-{
-	int arr1[] = { 1,3,5,7,9 };
-	int arr2[] = { 2,4,6,8,10 };
-
-	/*int arr3[5] = { 0 };
-	arr3 = arr2;					//这种写法是错误的，因为数组名是地址，不是变量
-	arr2 = arr1;
-	arr1 = arr3;*/
-
-	int sz = sizeof(arr1) / sizeof(arr1[0]);
-	for (int i = 0; i < sz; i++)
-	{
-		int a = 0;
-		a = arr1[i];
-		arr1[i] = arr2[i];
-		arr2[i] = a;
-	}
-
-	return 0;
-}
+//int main()
+//{
+//	int arr1[] = { 1,3,5,7,9 };
+//	int arr2[] = { 2,4,6,8,10 };
+//
+//	/*int arr3[5] = { 0 };
+//	arr3 = arr2;					//这种写法是错误的，因为数组名是地址，不是变量
+//	arr2 = arr1;
+//	arr1 = arr3;*/
+//
+//	int sz = sizeof(arr1) / sizeof(arr1[0]);
+//	for (int i = 0; i < sz; i++)
+//	{
+//		int a = arr1[i];
+//		arr1[i] = arr2[i];
+//		arr2[i] = a;
+//	}
+//
+//	return 0;
+//}

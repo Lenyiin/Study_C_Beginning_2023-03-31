@@ -45,5 +45,14 @@
     <ClCompile Include="test-10-操作符详解.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test-11-指针初阶.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test-12-结构体初阶.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test-13-实用调试技巧.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

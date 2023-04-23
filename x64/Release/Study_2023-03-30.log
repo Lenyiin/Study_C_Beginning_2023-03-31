@@ -1,0 +1,20 @@
+﻿  test-1-主函数-数据类型及大小-scanf函数.c
+  test-10-操作符详解.c
+  test-11-指针初阶.c
+  test-12-结构体初阶.c
+D:\C_code\Study_2023-03-30\Study_2023-03-30\test-12-结构体初阶.c(1,1): warning C4828: 文件包含在偏移 0x804 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  test-13-实用调试技巧.c
+  test-2-数组里找最大值、求和-刷题-指针-作用域-生命周期-跨文件声明-常量、常变量-字符串-转义字符-注释.c
+  test-3-选择语句-循环语句-创建函数-数组-操作符（算数、位移、单目、关系操作符、条件操作符、常见关键字、typedef、static静态的）.c
+  test-4-define-指针-结构体.c
+  test-5-分支语句（if、switch、while、for及变种、do...while、goto）.c
+  test-6-函数（库函数、自定义函数）-实参、形参-二分查找一个数-链式访问、嵌套调用-递归、迭代.c
+  test-7-数组定义、创建、传参、冒泡排序.c
+  test-8-三、五子棋.c
+  test-9-扫雷.c
+D:\C_code\Study_2023-03-30\Study_2023-03-30\test-9-扫雷.c(1,1): warning C4828: 文件包含在偏移 0x1606 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 3 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Study_2023-03-30.vcxproj -> D:\C_code\Study_2023-03-30\x64\Release\Study_20230330.exe
