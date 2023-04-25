@@ -1,6 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 
+//P87-P87
+
+
 //结构体
 //1.结构体类型的声明
 //2.结构体初始化

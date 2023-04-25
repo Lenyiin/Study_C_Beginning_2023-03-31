@@ -1,6 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 
+
+//P82-P86
+
 //本章重点
 //指针是什么
 //指针和指针类型

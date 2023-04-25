@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 
-//P71-
+//P71-P81
 
 //²Ù×÷·û
 
