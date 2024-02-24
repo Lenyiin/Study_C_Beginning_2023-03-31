@@ -53,6 +53,18 @@
 
 //int main()
 //{
+//    int a = 10;		// 向内存申请4个字节，存储10
+//    &a;				// 取地址操作符
+//    printf("%p\n", &a);	// %p 打印地址
+//    int* p = &a;	// p就是指针变量	类型是 int*
+//    int b = *p;		// *p 解引用
+//    printf("%d\n", b);	// 10
+//
+//    return 0;
+//}
+
+//int main()
+//{
 //	int a = 10;					//a在内存中要分配空间  -  4个
 //	printf("%p\n", &a);			//%p专门用来打印地址的
 //	int* pa = &a;				//pa是用来存放地址的，在C语言中pa叫指针变量
@@ -98,19 +110,20 @@
 //结构体可以让c语言创建新的类型出来
 //创建一个学生
 
-struct Stu
-{
-	char name[20];			//成员变量
-	int age;
-	double score;
-};
-//创建一个书的类型
-struct Book
-{
-	char name[20];
-	float price;
-	char id[30];
-};
+//struct Stu
+//{
+//	char name[20];			//成员变量
+//	int age;
+//	double score;
+//};
+//
+////创建一个书的类型
+//struct Book
+//{
+//	char name[20];
+//	float price;
+//	char id[30];
+//};
 
 //int main()
 //{
@@ -123,6 +136,38 @@ struct Book
 //}
 
 //一般不建议把函数的名字写成全大写
+
+//// 创建一个学生
+//struct Stu
+//{
+//	//成员变量
+//	char name[20];
+//	int age;
+//	char sex[10];
+//	char tele[12];
+//	double score;
+//};
+//
+//void Print(struct Stu* ps)
+//{
+//	printf("%s %d %s %s %.2f\n", (*ps).name, (*ps).age, (*ps).sex, (*ps).tele, (*ps).score);
+//
+//	// 结构体指针变量->成员名
+//	printf("%s %d %s %s %.2f\n", ps->name, ps->age, ps->sex, ps->tele, ps->score);
+//}
+//
+//int main()
+//{
+//	struct Stu s = { "zhangsan", 20, "nan", "15562738495", 76.4 };
+//
+//	// 结构体对象.成员名
+//	printf("%s %d %s %s %.2f\n", s.name, s.age, s.sex, s.tele, s.score);
+//
+//	// 调用自定义函数
+//	Print(&s);
+//
+//	return 0;
+//}
 
 
 //作业

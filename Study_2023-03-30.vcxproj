@@ -32,6 +32,7 @@
     <ClCompile Include="test-7-数组定义、创建、传参、冒泡排序.c" />
     <ClCompile Include="test-8-三、五子棋.c" />
     <ClCompile Include="test-9-扫雷.c" />
+    <ClCompile Include="test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

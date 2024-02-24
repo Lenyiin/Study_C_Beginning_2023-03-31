@@ -194,6 +194,15 @@
 
 //int main()
 //{
+//	int ch = getchar();		// getchar 能获取一个字符，把字符ASCII码放进 ch 中
+//	printf("%c\n", ch);
+//	putchar(ch);			// putchar 打印一个字符
+//
+//	return 0;
+//}
+
+//int main()
+//{
 //	int ch = getchar();			//获取一个字符
 //	printf("%c\n", ch);
 //	putchar(ch);				//输出一个字符
@@ -249,7 +258,20 @@
 //	return 0;
 //}
 
-
+//int main()
+//{
+//	char ch = '\0';
+//	while ((ch = getchar()) != EOF)
+//	{
+//		if (ch < '0' || ch>'9')
+//		{
+//			continue;
+//		}
+//		putchar(ch);
+//	}
+//
+//	return 0;
+//}
 
 
 //for 循环
@@ -354,6 +376,23 @@
 //判断省略恒为真
 
 
+//int main()
+//{
+//	int i = 0;
+//	int k = 0;
+//	for (i = 0, k = 0; k = 0; i++, k++)			// 这里的k=0是赋值，条件为假，循环一次都不会进去
+//	{
+//		printf("我爱C语言！！！%d%d\n", i, k);
+//	}
+//
+//	for (i = 0, k = 0; k == 0; i++, k++)		// 这里的k==0是判断，条件为真，循环进去一次
+//	{
+//		printf("我爱C语言！！！%d%d\n", i, k);
+//	}
+//
+//	return 0;
+//}
+
 
 //do...while循环
 //int main()
@@ -416,6 +455,19 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//    int num = 0;
+//    int ret = 1;
+//    scanf("%d", &num);
+//    for (int i = 1; i <= num; i++)
+//    {
+//        ret = ret * i;
+//    }
+//    printf("%d\n", ret);
+//
+//    return 0;
+//}
 
 //计算1-10阶乘的和
 
@@ -435,6 +487,44 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//    int num = 0;
+//    int sum = 0;
+//    int ret = 1;
+//    scanf("%d", &num);
+//    for (int i = 1; i <= num; i++)
+//    {
+//        ret = ret * i;
+//        sum = sum + ret;
+//    }
+//    printf("%d\n", sum);
+//
+//    return 0;
+//}
+
+//int main()
+//{
+//    int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//    int k = 0;
+//    int i = 0;
+//    scanf("%d", &k);
+//    int sz = sizeof(arr) / sizeof(arr[0]);
+//    for (i = 0; i < sz; i++)
+//    {
+//        if (arr[i] == k)
+//        {
+//            printf("找到了，下表是：%d\n", i);
+//            break;
+//        }
+//    }
+//    if (i == sz)
+//    {
+//        printf("查无此数\n");
+//    }
+//
+//    return 0;
+//}
 
 //在一个有序数组中查找具体的某个数字n
 //折半查找、二分查找
@@ -470,6 +560,36 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//    int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//    int sz = sizeof(arr) / sizeof(arr[0]);
+//    int k = 0;
+//    scanf("%d", &k);
+//    int left = 0;
+//    int right = sz - 1;
+//    while (left <= right)
+//    {
+//        int mid = (right + left) / 2;
+//        if (arr[mid] > k)
+//        {
+//            right = mid - 1;
+//        }
+//        else if (arr[mid] < k)
+//        {
+//            left = mid + 1;
+//        }
+//        else
+//        {
+//            printf("找到了，下表是：%d\n", mid);
+//            break;
+//        }
+//    }
+//    if (left > right)
+//        printf("查无此数\n");
+//
+//    return 0;
+//}
 
 
 //将一个字符串从两头往中间生成，其余用#填充
@@ -496,9 +616,43 @@
 //	return 0;
 //}
 
+//#include <windows.h>
+//#include <stdlib.h>
+//
+//int main()
+//{
+//    char arr1[] = "welcome to bejing!!!";
+//    char arr2[] = "####################";
+//    int sz = sizeof(arr1) / sizeof(arr1[0]);
+//    int left = 0;
+//    int right = sz - 2;
+//    while (left <= right)
+//    {
+//        arr2[left] = arr1[left];
+//        arr2[right] = arr1[right];
+//        left++;
+//        right--;
+//
+//        // 清空屏幕
+//        system("cls");      // system 是一个库函数，可以执行系统命令
+//        printf("%s\n", arr2);
+//        Sleep(100);
+//
+//        // 清空屏幕
+//        // system("cls");      // system 是一个库函数，可以执行系统命令
+//
+//        //for (int i = 0; i < sz; i++)
+//        //{
+//        //    printf("%c", arr2[i]);
+//        //}
+//        //printf("\n");
+//    }
+//    // printf("%s\n", arr2);
+//
+//    return 0;
+//}
 
-
-//输入密码，最多只能输入三次，输入正确则登陆成功，三次都输入错误则退出程序
+////输入密码，最多只能输入三次，输入正确则登陆成功，三次都输入错误则退出程序
 //int main()
 //{
 //	int i = 0;
@@ -538,10 +692,11 @@
 //	a.猜对了，就恭喜你，游戏结束
 //	b.猜错了，会告诉猜大了，还是猜小了，继续猜，直到猜对
 //3.游戏可以一直玩，除非退出游戏
-#include<stdlib.h>
-#include<time.h>
-
-//void menu()
+//#include <stdlib.h>
+//#include <time.h>
+//#include <windows.h>
+//
+//void menu1()
 //{
 //	printf("******************************************************\n");
 //	printf("*****************  1. play  **************************\n");
@@ -558,9 +713,8 @@
 //	int j = 0;
 //	while (1)
 //	{
-//		
 //		int guess = 0;
-//		printf("请第%d次猜数字：\n", j + 1);
+//		printf("请第%d次猜数字：", j + 1);
 //		j++;
 //		scanf("%d", &guess);
 //		if (guess < ret)
@@ -578,17 +732,17 @@
 //		}
 //	}
 //}
-
+//
 //int main()
 //{
 //	int input = 0;
-//
 //	srand((unsigned int)time(NULL));			//time函数		需要调用头文件time.h
+//
 //	do
 //	{
-//		
-//		
-//		menu();				//打印菜单
+//		Sleep(1000);
+//		system("cls");			//清空屏幕
+//		menu1();				//打印菜单
 //		printf("玩猜数字游戏吗？玩的话请按1，不玩请按0。\n");
 //		scanf("%d", &input);
 //		switch (input)
@@ -598,14 +752,15 @@
 //			game();
 //			break;
 //		case 0:
-//			printf("好的，正在退出游戏... ...");
+//			printf("好的，正在退出游戏... ...\n");
 //			break;
 //		default:
-//			printf("选择错误，请重新选择");
+//			printf("选择错误，请重新选择\n");
 //			break;
 //		}
 //
 //	} while (input);
+//
 //	return 0;
 //}
 

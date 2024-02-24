@@ -113,7 +113,7 @@
 
 
 //全局变量		{}外部定义的
-//int a=100
+//int a = 100;
 //int main()
 //{
 //	//局部变量	{}内部定义的
@@ -148,3 +148,34 @@
 
 
 int g_val = 2023;
+//
+//
+//int main()
+//{
+//	{
+//		int a = 10;
+//		printf("%d\n", a);
+//	}
+//	printf("%d\n", a);
+//
+//	return 0;
+//}
+
+
+//extern int a;
+//
+//void func()
+//{
+//	printf("test-->%d\n", a);
+//}
+//
+//int main()
+//{
+//	func();
+//	{
+//		printf("%d\n", a);
+//	}
+//	printf("%d\n", a);
+//
+//	return 0;
+//}

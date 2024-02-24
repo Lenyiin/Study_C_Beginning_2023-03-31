@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 
-//P88-P97
+//P88-P99
 
 
 //实用调试技巧
@@ -74,6 +74,27 @@
 //4.添加必要的注释
 //5.避免编码的陷阱
 
+#include <string.h>
+//void my_strcpy(char* dest, char* src)
+//{
+//	while (*src != '\0')
+//	{
+//		*dest = *src;
+//		dest++;
+//		src++;
+//	}
+//	*dest = *src;
+//}
+//
+//int main()
+//{
+//	char arr1[20] = { 0 };
+//	char arr2[] = "hello world";
+//	my_strcpy(arr1, arr2);
+//	printf("%s\n", arr1);
+//
+//	return 0;
+//}
 
 //模拟实现strcpy
 //strcpy - 字符串拷贝
@@ -123,22 +144,21 @@
 
 //int main()
 //{
-//	/*int num = 10;
-//	int* p = &num;
+//	int num1 = 10;
+//	int* p = &num1;
 //	*p = 20;
-//	printf("%d\n", num);*/
+//	printf("%d\n", num1);
 //
 //	//const 修饰变量，这个变量就成为常变量，不能被修改，但本质上还是变量
-//	const int num = 10;
-//	//num = 20;
-//	/*const int* p = &num;
-//	//const 修饰指针变量的时候
-//	//const 如果放在*的左边，修饰的是*p，表示指针指向的内容，是不能通过指针来改变的
-//	//		但是指针变量本身是可以修改的
-//	//*p = 20;
+//	const int num2 = 10;
+//	// num2 = 20;
+//	const int* p = &num2;
+//	// const 修饰指针变量的时候
+//	// const 如果放在*的左边，修饰的是*p，表示指针指向的内容，是不能通过指针来改变的,但是指针变量本身是可以修改的
+//	*p = 20;
 //	int n = 100;
 //	p = &n;			//指针变量本身是可以修改的
-//	printf("%d\n", num);*/
+//	printf("%d\n", num);
 //
 //	int* const p = &num;			//如果const放在*的右边，修饰的是指针变量p，表示指针变量不能被改变
 //									//但是指针指向的内容，可以被改变
@@ -236,6 +256,29 @@ int Numberof12(int n)
 //	return 0;
 //}
 
+//#include <stdio.h>
+//#include <assert.h>
+//
+//int my_strlen(const char* str)
+//{
+//	int count = 0;
+//	assert(str);
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	char arr[] = "hello world";
+//	int len = my_strlen(arr);
+//	printf("%d\n", len);
+//
+//	return 0;
+//}
 
 //写一个代码判断一个数字是不是2的n次方			k&(k-1)==0
 
@@ -322,47 +365,147 @@ int Numberof12(int n)
 
 
 //作业  
-reverse(char* left, char* right)
-{
-	while(left<right)
-	{
-		char tmp = 0;
-		tmp = *left;
-		*left = *right;
-		*right = tmp;
-		left++;
-		right--;
-	}
-}
-int main()
-{
-	char arr[100] = { 0 };
-	gets(arr);						//scanf()函数只能录入空格前面的字符，所以使用gets函数
-	//三步反转法
-	//1.字符串整体反转
-	//2.每个单词逆序
-	//3.
+//reverse(char* left, char* right)
+//{
+//	while(left<right)
+//	{
+//		char tmp = 0;
+//		tmp = *left;
+//		*left = *right;
+//		*right = tmp;
+//		left++;
+//		right--;
+//	}
+//}
+//int main()
+//{
+//	char arr[100] = { 0 };
+//	gets(arr);						//scanf()函数只能录入空格前面的字符，所以使用gets函数
+//	//三步反转法
+//	//1.字符串整体反转
+//	//2.每个单词逆序
+//	//3.
+//
+//	int len = strlen(arr);
+//	reverse(arr, arr + len - 1);		//整体逆序
+//	printf("%s\n", arr);
+//
+//	char* start = arr;
+//	while (*start)
+//	{
+//		char* end = start;
+//		while (*end != ' ' && *end != '\0')
+//		{
+//			end++;
+//		}
+//		reverse(start, end - 1);
+//		if (*end == ' ')
+//			start = end + 1;
+//		else
+//			start = end;
+//	}
+//
+//	printf("%s\n", arr);
+//
+//	return 0;
+//}
 
-	int len = strlen(arr);
-	reverse(arr, arr + len - 1);		//整体逆序
-	printf("%s\n", arr);
+//int main()
+//{
+//	int a = 0;
+//	int n = 0;
+//	scanf("%d %d", &a, &n);
+//	int i = 0;
+//	int sum = 0;
+//	int k = 0;
+//
+//	for (i = 0; i < n; i++)
+//	{
+//		k = k * 10 + a;
+//		sum += k;
+//	}
+//
+//	printf("%d\n", sum);
+//
+//	return 0;
+//}
 
-	char* start = arr;
-	while (*start)
-	{
-		char* end = start;
-		while (*end != ' ' && *end != '\0')
-		{
-			end++;
-		}
-		reverse(start, end - 1);
-		if (*end == ' ')
-			start = end + 1;
-		else
-			start = end;
-	}
+//#include <math.h>
+//int is_anrcissistic_number(int i)
+//{
+//	// 判断i是否为水仙花数
+//	// 12345
+//	// 1. 计算i是几位数 -> n
+//	int n = 1;			// 任何一个数至少是一位数
+//	int tmp = i;
+//	int sum = 0;
+//	while (tmp / 10)
+//	{
+//		n++;
+//		tmp /= 10;
+//	}
+//	// 2. 得到i每一位，计算他的n次方之和
+//	tmp = i;
+//	while (tmp)
+//	{
+//		sum += pow(tmp % 10, n);
+//		tmp /= 10;
+//	}
+//	if (sum == i)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//}
+//
+//int main()
+//{
+//	int i = 0;
+//	for (i = 0; i <= 100000; i++)
+//	{
+//		if (is_anrcissistic_number(i))
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	printf("\n");
+//
+//	return 0;
+//}
 
-	printf("%s\n", arr);
+//int main()
+//{
+//	int money = 0;
+//	scanf("%d", &money);
+//	int total = money;
+//	int empty = money;
+//
+//	// 置换
+//	while (empty >= 2)
+//	{
+//		total += empty / 2;
+//		empty = empty / 2 + empty % 2;
+//	}
+//	printf("%d\n", total);
+//
+//	return 0;
+//}
 
-	return 0;
-}
+//int main()
+//{
+//	int money = 0;
+//	scanf("%d", &money);
+//	if (money > 0)
+//	{
+//		printf("%d\n", 2 * money - 1);
+//	}
+//	else
+//	{
+//		printf("%d\n", 0);
+//	}
+//
+//	return 0;
+//}

@@ -260,7 +260,54 @@
 //}
 
 
-static int Add1(int x, int y)
-{
-	return x + y;
-}
+//static int Add1(int x, int y)
+//{
+//	return x + y;
+//}
+
+
+
+
+//int main()
+//{
+//    // #qWer$
+//    // char 字符类型
+//    // 'a'	字符常量
+//    char ch = 'w';	// 字符变量
+//
+//    // 字符串
+//    // C语言中有没有字符串类型？	-- 没有
+//    "abcdef";
+//    // []内可以空着，它会根据后面字符串内容自动开辟空间
+//    char arr1[] = "abcdef";	// 7	abcdef\0	7个字符
+//    char arr2[] = { 'a', 'b', 'c', 'd', 'e', 'f' };	// 6个字符	结尾不含 \0
+//    char arr3[] = { 'a', 'b', 'c', 'd', 'e', 'f', '\0'};	// 7个字符	手动添加 \0
+//
+//    printf("%s\n", arr1);
+//    printf("%s\n", arr2);
+//    printf("%s\n", arr3);
+//
+//    return 0;
+//}
+
+
+#include<string.h>
+
+//int main()
+//{
+//	char arr1[] = "abcdef";
+//	char arr2[] = { 'a', 'b', 'c', 'd', 'e', 'f' };
+//	char arr3[] = { 'a', 'b', 'c', 'd', 'e', 'f', '\0' };
+//
+//	int len = strlen("abcdef");	// 求字符串长度的一个函数，string length	头文件 string.h
+//	printf("%d\n", len);
+//	printf("%d\n", strlen(arr1));
+//	printf("%d\n", strlen(arr2));
+//	printf("%d\n", strlen(arr3));
+//
+//	printf("\a");
+//
+//	printf("%d\n", strlen("c:\test\328\test.c"));	// 14个字符	\t	\32	8	\0
+//
+//	return 0;
+//}

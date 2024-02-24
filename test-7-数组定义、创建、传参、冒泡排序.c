@@ -24,7 +24,7 @@
 //int main()
 //{
 //	int arr[10];						//创建数组
-//	//char ch[5];
+//	// char ch[5];
 //	int a = 10;									//初始化
 //	int arr1[10] = { 1,2,3,4,5,6,7,8,9,10 };	//完全初始化
 //	int arr2[10] = { 1,2,3,4,5 };				//不完全初始化，未初始化的自动补充0
@@ -144,7 +144,7 @@
 
 //数组作为函数参数
 //往往我们在写代码的时候，会将数组作为参数传个函数，比如：我要实现一个冒泡排序，函数将一个整型数组排序。
-//冒泡排序
+//// 冒泡排序
 //void bubble_sort(int arr[],int sz)
 //{
 //	//冒泡排序的思想：两两相邻的元素进行比较，并且可能的话需要交换
@@ -175,7 +175,7 @@
 //	bubble_sort(arr,sz);						//数组在传参的时候是传首地址
 //	for (int i = 0; i < 10; i++)
 //	{
-//		printf("%d", arr[i]);
+//		printf("%d ", arr[i]);
 //	}
 //
 //	return 0;
@@ -190,11 +190,11 @@
 //{
 //	int arr[10] = { 0 };
 //	printf("%p\n", &arr);			//1 - &arr取出的是数组的地址
-//	//printf("%p\n", &arr+1);			//1 - 举例		加1  加的是40
+//	printf("%p\n", &arr+1);			//1 - 举例		加1  加的是40
 //
 //	printf("%p\n", arr);			//2 - 是数组的地址
-//	//printf("%p\n", arr+1);			//2 - 举例		加1  加的是4
-//	printf("%p\n", &arr[0]);			//3
+//	printf("%p\n", arr+1);			//2 - 举例		加1  加的是4
+//	printf("%p\n", &arr[0]);		//3
 //
 //
 //	int sz = sizeof(arr);			//数组名表示整个数组
@@ -208,34 +208,34 @@
 
 
 //冒泡排序的优化
-void bubble_sort(int arr[], int sz)
-{
-	//冒泡排序的思想：两两相邻的元素进行比较，并且可能的话需要交换
-	//int sz = sizeof(arr) / sizeof(arr[0]);				//不能在函数里面求数组大小，因为函数传进来的是地址，应在外面求好送进来
-	//确定个数
-	int i = 0;
-	for (i = 0; i < sz - 1; i++)
-	{
-		//一趟冒泡排序的过程
-		int j = 0;
-		int flag = 1;
-		for (j = 0; j < sz - 1 - i; j++)
-		{
-			if (arr[j] > arr[j + 1])
-			{
-				//交换
-				int a = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = a;
-				flag = 0;
-			}
-		}
-		if (flag == 1)						//如果一次都没交换，说明已经排好了，不需要再循环了
-		{
-			break;
-		}
-	}
-}
+//void bubble_sort(int arr[], int sz)
+//{
+//	//冒泡排序的思想：两两相邻的元素进行比较，并且可能的话需要交换
+//	//int sz = sizeof(arr) / sizeof(arr[0]);				//不能在函数里面求数组大小，因为函数传进来的是地址，应在外面求好送进来
+//	//确定个数
+//	int i = 0;
+//	for (i = 0; i < sz - 1; i++)
+//	{
+//		//一趟冒泡排序的过程
+//		int j = 0;
+//		int flag = 1;
+//		for (j = 0; j < sz - 1 - i; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				//交换
+//				int a = arr[j];
+//				arr[j] = arr[j + 1];
+//				arr[j + 1] = a;
+//				flag = 0;
+//			}
+//		}
+//		if (flag == 1)						//如果一次都没交换，说明已经排好了，不需要再循环了
+//		{
+//			break;
+//		}
+//	}
+//}
 //int main()
 //{
 //	int arr[] = { 0,1,2,3,4,5,6,7,8,9 };
@@ -250,4 +250,195 @@ void bubble_sort(int arr[], int sz)
 //	return 0;
 //}
 
+//int main()
+//{
+//	int arr[3][4] = { 0 };
+//
+//	printf("%d\n", sizeof(arr));						// 48
+//	printf("%d\n", sizeof(arr[0]));						// 16
+//	printf("%d\n", sizeof(arr[0][0]));					// 4
+//
+//	printf("%d\n", sizeof(arr) / sizeof(arr[0]));		// 3	计算有几行
+//	printf("%d\n", sizeof(arr[0]) / sizeof(arr[0][0]));	// 4	计算有几列
+//
+//	printf("%p\n", arr);								// 二维数组的数组名也表示数组首元素的地址
+//	printf("%p\n", arr[0]);								// 第一行的地址
+//	printf("%p\n", &arr[0][0]);							// 第一个元素的地址
+//	printf("%p\n", arr[1]);
+//	printf("%p\n", arr[2]);
+//
+//	return 0;
+//}
 
+// 1
+//int main()
+//{
+//	char arr[] = "abcde";
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int left = 0;
+//	// int right = sz - 2;
+//	int right = strlen(arr) - 1;
+//
+//	while (left < right)
+//	{
+//		char tmp = arr[left];
+//		arr[left] = arr[right];
+//		arr[right] = tmp;
+//		left++;
+//		right--;
+//	}
+//
+//	printf("%s", arr);
+//
+//	return 0;
+//}
+
+// 2
+//void reverse(char arr[])
+//{
+//	int left = 0;
+//	int right = strlen(arr) - 1;
+//
+//	while (left < right)
+//	{
+//		char tmp = arr[left];
+//		arr[left] = arr[right];
+//		arr[right] = tmp;
+//		left++;
+//		right--;
+//	}
+//}
+//
+//int main()
+//{
+//	char arr[] = "abcde";
+//	
+//	reverse(arr);
+//
+//	printf("%s", arr);
+//
+//	return 0;
+//}
+
+// 3
+//// 递归
+//int my_strlen(char* str)
+//{
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//
+//	return count;
+//}
+//
+//void reverse(char* str)
+//{
+//	char tmp = *str;
+//	int len = my_strlen(str);
+//	*str = *(str + len - 1);
+//	*(str + len - 1) = '\0';
+//	if (my_strlen(str + 1) >= 2)
+//		reverse(str + 1);
+//	*(str + len - 1) = tmp;
+//}
+//
+//int main()
+//{
+//	char arr[] = "abcdefg";
+//	reverse(arr);
+//	printf("%s\n", arr);
+//
+//	return 0;
+//}
+
+//int DigitSum(unsigned int num)
+//{
+//	int sum = 0;
+//	while (num / 10)
+//	{
+//		sum += num % 10;
+//		num /= 10;
+//	}
+//	sum += num;
+//
+//	return sum;
+//}
+//
+//int main()
+//{
+//	unsigned int num = 0;
+//	scanf("%u", &num);
+//	int sum = DigitSum(num);
+//	printf("%d\n", sum);
+//
+//	return 0;
+//}
+
+//int DigitSum(unsigned int num)
+//{
+//	if (num > 9)
+//	{
+//		return DigitSum(num / 10) + num % 10;
+//	}
+//	else
+//	{
+//		return num;
+//	}
+//}
+//
+//int main()
+//{
+//	unsigned int num = 0;
+//	scanf("%u", &num);
+//	int sum = DigitSum(num);
+//	printf("%d\n", sum);
+//
+//	return 0;
+//}
+
+//double Pow(int n, int k)
+//{
+//	if (k > 0)
+//	{
+//		return Pow(n, k - 1) * n;
+//	}
+//	else if (k == 0)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return 1.0 / Pow(n, -k);
+//	}
+//}
+//
+//int main()
+//{
+//	int n = 0;
+//	int k = 0;
+//	scanf("%d %d", &n, &k);
+//	double ret = Pow(n, k);
+//	printf("%lf\n", ret);
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[] = { 1, 2, (3, 4), 5 };
+//	printf("%d\n", sizeof(arr));
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	char str[] = "hello world!";
+//	printf("%d %d\n", sizeof(str), strlen(str));	// 13 12
+//
+//	return 0;
+//}

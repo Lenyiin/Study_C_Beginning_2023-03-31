@@ -1,5 +1,3 @@
-﻿D:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中间目录(x64\Debug\)包含从另一个项目(Study_20230330.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+﻿D:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中间目录(x64\Debug\)包含从另一个项目(Study_20230330.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
   test-13-实用调试技巧.c
-D:\C_code\Study_2023-03-30\Study_2023-03-30\test-13-实用调试技巧.c(340,2): warning C4013: “gets”未定义；假设外部返回 int
-D:\C_code\Study_2023-03-30\Study_2023-03-30\test-13-实用调试技巧.c(346,12): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  Study_2023-03-30.vcxproj -> D:\C_code\Study_2023-03-30\x64\Debug\Study_Beginning_c_20230330.exe
+  Study_2023-03-30.vcxproj -> E:\Code\bit courses\C_code\Study_2023-03-30\x64\Debug\Study_Beginning_c_20230330.exe

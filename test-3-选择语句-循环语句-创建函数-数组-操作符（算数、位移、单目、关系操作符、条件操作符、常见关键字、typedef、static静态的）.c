@@ -4,6 +4,45 @@
 //P15-P23
 
 //选择语句
+
+//int main()
+//{
+//	int coding = 0;
+//	printf("你会去敲代码吗？（选择1 or 0）：");
+//	scanf("%d", &coding);
+//	if (coding == 1)
+//	{
+//		printf("坚持，你会有好的offer\n");
+//	}
+//	else
+//	{
+//		printf("放弃吧，回家种地去\n");
+//	}
+//
+//	return 0;
+//}
+
+// 20000行的代码积累
+//int main()
+//{
+//	int line = 0;
+//	printf("刷视频学习\n");
+//
+//	while (line < 20000)
+//	{
+//		printf("写代码：%d\n", line);
+//		line++;
+//	}
+//
+//	if (line >= 20000)
+//	{
+//		printf("好 offer\n");
+//	}
+//
+//	return 0;
+//}
+
+
 //int main()
 //{
 //	int input = 0;		//输入的值
@@ -46,13 +85,13 @@
 //函数
 
 //创建函数
-int Add(int x, int y)
-{
-	int z = 0;
-	z = x + y;
-	return z;
-}
-
+//int Add(int x, int y)
+//{
+//	int z = 0;
+//	z = x + y;
+//	return z;
+//}
+//
 //int main()
 //{
 //	int num1 = 0;
@@ -101,6 +140,7 @@ int Add(int x, int y)
 //	printf("%f\n", b);
 //	float c = 9 / 2.0;					//结果是4.500000			除号两端有一个是小数，执行小数除法
 //	printf("%f\n", c);
+//	printf("%.1f\n", c);				//结果是4.5
 //	int d = 9 % 2;						//取模%
 //	printf("%d\n", d);
 //	return 0;
@@ -207,7 +247,7 @@ int Add(int x, int y)
 //}
 
 
-//++		--
+// ++		--
 //int main()
 //{
 //	int a = 10;
@@ -360,30 +400,31 @@ typedef unsigned int u_int;
 //1.修饰局部变量
 //2.修饰全局变量
 //3.修饰函数
-void test()
-{
-	int a = 1;							//a是局部变量，进入这个函数创建，出这个函数就会被销毁
-	static int b = 1;					//创建之后，不会被销毁，生命周期边长
-	//static修饰局部变量，改变了局部变量的生命周期（本质上是改变了变量的存储类型）
-	a++;
-	b++;
-	printf("a=%d\n", a);
-	printf("b=%d\n", b);
-
-}
-
-extern int g_val;
+//void test1(){
+//	int a = 1;							//a是局部变量，进入这个函数创建，出这个函数就会被销毁
+//	a++;
+//	printf("a=%d ", a);}
+//
+//void test2(){
+//	//static修饰局部变量，改变了局部变量的生命周期（本质上是改变了变量的存储类型）
+//	static int b = 1;					//创建之后，不会被销毁，生命周期边长
+//	b++;
+//	printf("b=%d ", b);}
+//
 //extern声明外部符号的
-
+//extern int g_val;
 //int main()
 //{
 //	int i = 0;
-//	while (i < 10)
-//	{
-//		test();
-//		i++;
-//	}
-//	printf("%d\n", g_val);
+//	while (i < 10){
+//		test1();
+//		i++;}
+//	printf("\n");
+//	i = 0;
+//	while (i < 10){
+//		test2();
+//		i++;}
+//	printf("\n");
 //	return 0;
 //}
 

@@ -64,6 +64,22 @@
 
 //int main()
 //{
+//	char* pc = NULL;
+//	short* ps = NULL;
+//	int* pi = NULL;
+//	double* pd = NULL;
+//
+//	// sizeof 返回的值的类型是无符号整型 unsigned int
+//	printf("%zu\n", sizeof(pc));
+//	printf("%zu\n", sizeof(ps));
+//	printf("%zu\n", sizeof(pi));
+//	printf("%zu\n", sizeof(pd));
+//
+//	return 0;
+//}
+
+//int main()
+//{
 //	int arr[10] = { 0 };
 //	int* p = arr;
 //	char* pc = arr;
@@ -170,7 +186,7 @@
 //	return 0;
 //}
 
-//计数器
+////计数器
 //int my_strlen2(char* str)
 //{
 //	int count = 0;
@@ -249,13 +265,28 @@
 //int main()
 //{
 //	int a = 10;
-//	int* pa = &a;		//pa是指针变量，一级指针
+//	int* pa = &a;		// pa是指针变量，一级指针
 //
-//	//ppa就是一个二级指针
-//	int** ppa = &pa;	//pa也是个变量，&pa取出pa在内存中起始地址
-//	int*** pppa = &ppa;	//三级指针
+//	/ /ppa就是一个二级指针
+//	int** ppa = &pa;	// pa也是个变量，&pa取出pa在内存中起始地址
+//	int*** pppa = &ppa;	// 三级指针
 //
-//	//*ppa==pa		*pa=a		==>		* *ppa=a
+//	// *ppa==pa		*pa=a		==>		* *ppa=a
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 10;
+//	int* pa = &a;		// pa是指针变量，一级指针
+//	*pa = 20;
+//	printf("%d\n", a);	// 20
+//
+//	int** ppa = &pa;	// ppa是二级指针变量
+//	**ppa = 30;
+//	printf("%d\n", a);	// 30
+//	// *ppa==pa		*pa=a		==>		* *ppa=a
+//
 //	return 0;
 //}
 
@@ -268,5 +299,60 @@
 //
 //	int* parr[5];				//整型指针的数组
 //	char* pch[5];
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int c = 30;
+//	// arr 是一个数组，存放的是 int 类型的数组
+//	int arr[] = { a,b,c };
+//
+//	int* pa = &a;
+//	int* pb = &b;
+//	int* pc = &c;
+//	// parr 是指针数组，存放的是 int* 类型的数组
+//	int* parr[] = { &a,&b,&c };
+//
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("%d ", *(parr[i]));
+//	}
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[3][4]= {1,2,3,4,2,3,4,5,3,4,5,6};
+//
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 4; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//
+//	int arr1[4] = { 1,2,3,4 };
+//	int arr2[4] = { 2,3,4,5 };
+//	int arr3[4] = { 3,4,5,6 };
+//	int* parr[3] = { arr1,arr2,arr3 };
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 4; j++)
+//		{
+//			// printf("%d ", *(parr[i] + j));
+//			printf("%d ", parr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//
 //	return 0;
 //}

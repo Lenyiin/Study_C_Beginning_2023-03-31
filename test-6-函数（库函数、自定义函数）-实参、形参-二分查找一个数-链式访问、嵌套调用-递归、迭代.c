@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+#include <string.h>
 
 //P45-P59
 
@@ -12,7 +13,17 @@
 //7.函数的声明和定义
 //8.函数递归
 
-
+//int main()
+//{
+//	char arr1[20] = { 0 };
+//	char arr2[] = "hello world";
+//
+//	strcpy(arr1, arr2);		// 将 arr2 里面的内容拷贝进 arr1
+//
+//	printf("%s\n", arr1);
+//
+//	return 0;
+//}
 
 
 //函数是什么？		维基百科的定义：子函数
@@ -43,6 +54,18 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	char arr1[] = "hello world!!!";
+//	memset(arr1, 'x', 5);				// 把 arr 字符串的前5个字符设置成 x
+//	printf("%s\n", arr1);				// xxxxx world!!!
+//
+//	char arr2[] = "hello world!!!";
+//	memset(arr2 + 6, 'y', 3);			// 把 arr 字符串的第6个字符开始往后3个字符设置成 y
+//	printf("%s\n", arr2);				// hello yyyld!!!
+//
+//	return 0;
+//}
 
 //IO函数		printf	scanf	getchar		putchar
 //字符串操作函数	strcmp		strlen
@@ -60,16 +83,16 @@
 //但是不一样的是这些都是我们自己来设计。这给程序员一个很大的发挥空间。
 
 
-//自定义函数
-int get_max(int i, int j)
-{
-	int z = 0;
-	if (i > j)
-		z = i;
-	else
-		z = j;
-	return z;		//返回较大值
-}
+////自定义函数
+//int get_max(int i, int j)
+//{
+//	int z = 0;
+//	if (i > j)
+//		z = i;
+//	else
+//		z = j;
+//	return z;		//返回较大值
+//}
 //int main()
 //{
 //	int i = 0;
@@ -85,24 +108,24 @@ int get_max(int i, int j)
 
 //函数返回类型的地方写出：void，表示这个函数不返回任何值，也不需要返回
 //写出问题了
-void exchange1(int i, int j)			//写错了				//传值调用
-{
-	//exchange1在被调用的时候，实参传给形参，其实形参是实参的一份临时拷贝
-	//改变形参，是不能改变实参
-	int z = 0;
-	z = i;
-	i = j;
-	j = z;
-
-}
-void exchange2(int *i, int *j)			//形式参数				//传址调用
-{
-	int z = 0;
-	z = *i;
-	*i = *j;
-	*j = z;
-	//return i, j;
-}
+//void exchange1(int i, int j)			//写错了				//传值调用
+//{
+//	//exchange1在被调用的时候，实参传给形参，其实形参是实参的一份临时拷贝
+//	//改变形参，是不能改变实参
+//	int z = 0;
+//	z = i;
+//	i = j;
+//	j = z;
+//
+//}
+//void exchange2(int *i, int *j)			//形式参数				//传址调用
+//{
+//	int z = 0;
+//	z = *i;
+//	*i = *j;
+//	*j = z;
+//	//return i, j;
+//}
 //int main()
 //{
 //	int i = 0;
@@ -113,9 +136,10 @@ void exchange2(int *i, int *j)			//形式参数				//传址调用
 //	printf("你输入的数字是%d和%d\n", i, j);
 //	//函数的调用
 //	exchange1(i, j);			//传值调用
+//	printf("exchange1交换后的顺序%d和%d\n", i, j);
 //	exchange2(&i, &j);			//传址调用						//实际参数
-//	
-//	printf("交换后的顺序%d和%d\n", i, j);
+//	printf("exchange2交换后的顺序%d和%d\n", i, j);
+//
 //	return 0;
 //}
 
@@ -141,7 +165,49 @@ void exchange2(int *i, int *j)			//形式参数				//传址调用
 //传址调用：把函数外部创建变量的内存地址传递给函数参数的一种调用函数的方式。
 //			这种传参方式可以让函数和函数外的变量建立起正真的联系，也就是函数内部可以直接操作函数外部的变量。
 
+//int main()
+//{
+//	for (int i = 100; i <= 200; i++)
+//	{
+//		int flag = 1;
+//		int ret = i / 2;
+//		for (int j = 2; j <= i-1; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				flag = 0;
+//				break;
+//			}
+//		}
+//		if (flag)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	printf("\n");
+//
+//	return 0;
+//}
 
+//int main()
+//{
+//	int year = 0;
+//	int count = 0;
+//	for (year = 1000; year <= 2000; year++)
+//	{
+//		// 判断 year 是不是闰年
+//		// 能被4整除，但不能被100整除。或者能被400整除
+//		if ((year % 4 == 0 && (year % 100 != 0)) || (year % 400 == 0))
+//		{
+//			printf("%d ", year);
+//			count++;
+//		}
+//	}
+//
+//	printf("\n%d\n", count);
+//
+//	return 0;
+//}
 
 //作业		写个函数打印100-200之间的素数
 #include<math.h>
@@ -208,28 +274,28 @@ int is_leap_year1(int a)
 
 
 //作业  用函数实现二分查找找一个数
-int binary_search(int arr[], int a, int b)
-{
-	int left = 0;
-	int right = b-1;
-	while(left<=right)
-	{
-		int mid = (left + right) / 2;
-		if (arr[mid] > a)
-		{
-			right = mid - 1;
-		}
-		else if (arr[mid] < a)
-		{
-			left = mid + 1;
-		}
-		else
-		{
-			return mid;
-		}
-	}
-	return -1;
-}
+//int binary_search(int arr[], int a, int b)
+//{
+//	int left = 0;
+//	int right = b-1;
+//	while(left<=right)
+//	{
+//		int mid = (left + right) / 2;
+//		if (arr[mid] > a)
+//		{
+//			right = mid - 1;
+//		}
+//		else if (arr[mid] < a)
+//		{
+//			left = mid + 1;
+//		}
+//		else
+//		{
+//			return mid;
+//		}
+//	}
+//	return -1;
+//}
 //int main()
 //{
 //	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
@@ -277,7 +343,7 @@ void Add1(int *a)
 
 
 //链式访问
-#include<string.h>
+//#include<string.h>
 //int main()
 //{
 //	int len = strlen("abc");
@@ -338,6 +404,7 @@ int add(int x, int y)
 //}
 
 
+
 //作业		接受一个整型值（无符号），按照顺序打印他的每一位。
 void print(unsigned int n)
 {
@@ -373,22 +440,34 @@ void print(unsigned int n)
 
 
 //作业     编写函数，不允许创建临时变量，求字符串的长度
-int my_strlen(char* str)
-{
-	if (*str != '\0')
-		return 1 + my_strlen(str + 1);
-	else
-		return 0;
-}
+//int my_strlen1(char* str)
+//{
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;		// 找下一个字符
+//	}
+//	return count;
+//}
+//
+//int my_strlen2(char* str)
+//{
+//	if (*str != '\0')
+//		return 1 + my_strlen(str + 1);
+//	else
+//		return 0;
+//}
+//
 //int main()
 //{
 //	char arr[] = "abc";
 //	//['a']['b']['c']['\0']
 //	//模拟实现一个strlen函数
-//	printf("%d\n", my_strlen(arr));
+//	printf("my_strlen1: %d\n", my_strlen1(arr));
+//	printf("my_strlen2: %d\n", my_strlen2(arr));
 //	return 0;
 //}
-
 
 
 //递归与迭代
@@ -409,7 +488,6 @@ jc(int a)
 //	printf("%d的阶乘是：%d\n",i, jc(i));
 //	return 0;
 //}
-
 
 
 //作业		第n个斐波那契数列
@@ -681,7 +759,7 @@ void reverse_string1(char* str)
 	int len = my_strlen1(str);
 	*str = *(str + len - 1);
 	*(str + len - 1) = '\0';
-	if (my_strlen(str + 1) > 1)
+	if (my_strlen1(str + 1) > 1)
 	{
 		reverse_string1(str + 1);
 	}
@@ -712,18 +790,18 @@ void reverse_string1(char* str)
 //	}
 //}
 //太复杂了，改进
-int DigitSum(int a)
-{
-
-	if (a >9)
-	{
-		return a % 10 + DigitSum(a / 10);
-	}
-	else
-	{
-		return a;
-	}
-}
+//int DigitSum(int a)
+//{
+//
+//	if (a >9)
+//	{
+//		return a % 10 + DigitSum(a / 10);
+//	}
+//	else
+//	{
+//		return a;
+//	}
+//}
 //int main()
 //{
 //	int i = 0;
@@ -756,15 +834,15 @@ int DigitSum(int a)
 //}
 //但是上面的代码有一点问题，k为负数就会出错。下面是改进代码
 
-double Pow(int n, int k)
-{
-	if (k == 0)
-		return 1.0;
-	else if (k > 0)
-		return n * Pow(n, k - 1);
-	else
-		return 1.0 / Pow(n, -k);
-}
+//double Pow(int n, int k)
+//{
+//	if (k == 0)
+//		return 1.0;
+//	else if (k > 0)
+//		return n * Pow(n, k - 1);
+//	else
+//		return 1.0 / Pow(n, -k);
+//}
 
 //int main()
 //{
